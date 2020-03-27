@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import include, path,re_path
 
 urlpatterns = [
+    #Manejo la direccion del URL para que se redireccione
     path('admin/', admin.site.urls),
-    path('', include ('Login.urls')),
+    path('', include ('Landing.urls')),
+    path('Login/', include ('Login.urls')),
+    path('Dashboard/',include ('Dashboard.urls')),
 ]

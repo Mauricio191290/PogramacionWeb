@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',
     'Login', 
+    'Landing',
+    'Dashboard',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +84,8 @@ DATABASES = {
     }
 }
 
+#Para que no pueda acceder al dashboard sin antes pasar por el login
+LOGIN_URL = '/Login/' 
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

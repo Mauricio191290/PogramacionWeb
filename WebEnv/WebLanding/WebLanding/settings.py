@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Login', 
     'Landing',
     'Dashboard',
+    'Register',
 ]
 
 MIDDLEWARE = [
@@ -78,14 +79,19 @@ WSGI_APPLICATION = 'WebLanding.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+  'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'WebDB',
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
-
 #Para que no pueda acceder al dashboard sin antes pasar por el login
 LOGIN_URL = '/Login/' 
+
+LOGOUT_URL = '/Login/'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

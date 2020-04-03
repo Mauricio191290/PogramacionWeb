@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 #from django.urls import path
 from django.urls import include, path,re_path
+from django.contrib.auth.views import logout_then_login
 
 urlpatterns = [
     #Manejo la direccion del URL para que se redireccione
@@ -23,4 +24,6 @@ urlpatterns = [
     path('', include ('Landing.urls')),
     path('Login/', include ('Login.urls')),
     path('Dashboard/',include ('Dashboard.urls')),
+    path('Register/', include ('Register.urls')),
+    path ('logout/',logout_then_login, name = 'logout'),
 ]

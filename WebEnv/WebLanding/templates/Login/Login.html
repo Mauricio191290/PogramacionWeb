@@ -8,27 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
-<body>
+<body style = "background-image: url(https://images2.alphacoders.com/220/220582.jpg);">
   <br>
   <br>
-    <div class="border border-danger mx-auto" style="width: 350px; text-align: center;">
-        <img src="https://i4.sndcdn.com/avatars-ihdAq5EcfLLzYAjl-CYzk2g-t500x500.jpg" class="rounded-circle" style = "width: 100px;"  alt="Cinque Terre">
+    <div class="border border-success mx-auto" style="width: 350px; text-align: center;">
+      <h1 style="color: azure;">Quien eres?</h1>
+      <br>
+        <img src="https://i.pinimg.com/originals/62/23/a1/6223a1f102d681115d1286d0a9600e0e.jpg" class="rounded-circle" style = "width: 100px;"  alt="Cinque Terre">
         <br>
         <form action="" method="POST">
           {%csrf_token%}
           
             <div class="form-group">
-              <label for="exampleInputEmail1">Correo</label>
+              <label for="exampleInputEmail1" style="color: azure;">Usuario</label>
               <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required name = "user">
-              <small id="emailHelp" class="form-text text-muted">No compartas tu contraseña con nadie</small>
+              <small id="emailHelp" class="form-text text-muted" style="color: azure;">No compartas tu contraseña con nadie</small>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Contraseña</label>
+              <label for="exampleInputPassword1" style = "color: azure;">Contraseña</label>
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required name = "password">
-            </div>
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
             </div>
             <button type="submit" class="btn btn-primary">Iniciar Sesion
             </button>
@@ -43,6 +41,9 @@
             <span>
             </span>
           </form>
+          <a href = "{% url 'Register:Register'%}">No tienes cuenta? Registrate!</a>
+          <br>
+          <br>
           <a href = "{% url 'Landing:Landing'%}">Ir a Landing</a>
     </div>
    

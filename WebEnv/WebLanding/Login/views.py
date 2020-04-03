@@ -51,13 +51,3 @@ class LoginClass(View):
            'error': self.message
         }
 
-# class LandingClass(View):
-#     templates_ok = 'Landing/Landing.html'
-#     def get(self, request, *args, **kwargs):
-#         return render(request,self.templates_ok,{})
-
-# class DashboardClass(View):
-#     templates_okidoki = 'Dashboard/Dashboard.html'
-#     def get (self,request,*args,**kwargs):
-#         #printn("GET DE DASHBOARD")
-#         return render(request,self.templates_okidoki,{})

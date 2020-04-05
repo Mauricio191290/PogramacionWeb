@@ -17,6 +17,8 @@ from django.contrib import admin
 #from django.urls import path
 from django.urls import include, path,re_path
 from django.contrib.auth.views import logout_then_login
+from django.config import settings
+from django.config.urls.static import static 
 
 urlpatterns = [
     #Manejo la direccion del URL para que se redireccione
@@ -26,4 +28,4 @@ urlpatterns = [
     path('Dashboard/',include ('Dashboard.urls')),
     path('Register/', include ('Register.urls')),
     path ('logout/',logout_then_login, name = 'logout'),
-]
+] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
